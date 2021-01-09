@@ -27,10 +27,23 @@
     <input type="text" id="num">
     <button id="btn">Guess</button>
     <script>
-        const num = document.getElementById('num');
+        
         const btn = document.getElementById('btn');
+        const random =Math.floor(Math.random() * 6) +1;
         btn.addEventListener('click', function (e) {
-            alert(num.value);
+            const num = (document.getElementById('num')).value;
+            if (!num) {
+                alert("input something, Please");
+                return;
+            }
+            if (num == random) {
+                alert("恭喜中獎");
+                return;
+            } else if (num > random) {
+                alert("在小一點");
+            } else if (num < random){
+                alert("在大一點");
+            }
         });
 
     </script>
