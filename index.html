@@ -39,12 +39,18 @@
             if (num === random) {
                 alert("恭喜中獎");
                 return;
-            } else if (num > 6 || num < 1) {
+            }
+            if (num > 6 || num < 1) {
                 alert("請輸入1 ~ 6的數字");
-            } else if (num > random) {
+                return;
+            }
+            if (num > random) {
                 alert("在小一點");
-            } else if (num < random){
+                return;
+            }
+            if (num < random){
                 alert("在大一點");
+                return;
             } 
         });
 
