@@ -34,7 +34,11 @@
         btn.addEventListener('click', function (e) {
             const num = parseInt((document.getElementById('num')).value);
             if (!num) {
-                alert("input something, Please");
+                Swal.fire({
+                    title: '喔喔！',
+                    text: 'input something, Please',
+                    icon: 'error',
+                })
                 return;
             }
             if (num === random) {
