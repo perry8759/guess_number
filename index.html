@@ -50,7 +50,11 @@
                 return;
             }
             if (num > 6 || num < 1) {
-                alert("請輸入1 ~ 6的數字");
+                Swal.fire({
+                    title: '喔喔！',
+                    text: '請輸入1 ~ 6的數字',
+                    icon: 'error',
+                })
                 return;
             }
             if (num > random) {
