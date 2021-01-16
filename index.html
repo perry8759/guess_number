@@ -50,7 +50,11 @@
                 return;
             }
             if (num > random) {
-                alert("在小一點");
+                Swal.fire({
+                    title: '喔喔！',
+                    text: '在小一點',
+                    icon: 'info',
+                })
                 return;
             }
             if (num < random){
