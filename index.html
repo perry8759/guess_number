@@ -42,7 +42,11 @@
                 return;
             }
             if (num === random) {
-                alert("恭喜中獎");
+                Swal.fire({
+                    title: '水喔！',
+                    text: '恭喜中獎！',
+                    icon: 'success',
+                })
                 return;
             }
             if (num > 6 || num < 1) {
